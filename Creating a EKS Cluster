@@ -1,0 +1,22 @@
+Creating a EKS cluster
+
+First need to create a EKS cluster in AWS Dashboard
+Steps:
+1. Search for EKS in search bar
+2. click on Add cluster>create.
+3. Give it a name
+4. Select the desired k8s version
+5. Select the IAM role
+  a. The permissions required for this role are AmazonEKSClusterPolicy
+6. Select the desired VPC and subnets
+7. Select the security group
+8. Leave rest all to default
+
+After the cluster is created it's time to create a node group.
+Open the cluster and head to compute section. Here we can find an option called add node group.
+1.Give it a name
+2. Select the IAM role
+  a. The permissions required for this role are AmazonEC2ContainerRegistryReadOnly, AmazonEKS_CNI_Policy, AmazonEKSWorkerNodePolicy
+3. select the instance ami and type
+4.. Select the desired number of instances required with min and max
+5. Select the subnet.
